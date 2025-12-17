@@ -7,6 +7,7 @@ import SearchBar from '@/components/SearchBar'
 import MiniChart from '@/components/MiniChart'
 import ExpandedRow from '@/components/ExpandedRow'
 import ThemeSelector from '@/components/ThemeSelector'
+import LiveTerminal from '@/components/LiveTerminal'
 
 type SortField = 'rank' | 'price' | 'change' | 'winRate'
 type SortDirection = 'asc' | 'desc'
@@ -500,6 +501,18 @@ export default function Home() {
                                 ))}
                             </div>
                         )}
+
+                        {/* Live AI Terminal - The Brain */}
+                        <div className="mt-8">
+                            <div className="mb-4">
+                                <h2 className="text-2xl font-bold text-white flex items-center gap-3">
+                                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                    El Cerebro
+                                    <span className="text-sm font-normal text-gray-400 ml-2">(Actividad en Tiempo Real)</span>
+                                </h2>
+                            </div>
+                            <LiveTerminal />
+                        </div>
                     </section>
 
                     {/* Right Ad Space - Binance Affiliate */}
