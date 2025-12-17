@@ -178,9 +178,9 @@ export default function Home() {
                             >
                                 <div className="relative overflow-hidden rounded-xl border-2 border-primary-500/30 hover:border-primary-500 transition-all duration-300 hover:shadow-glow">
                                     <img
-                                        src="https://via.placeholder.com/300x600/1a1f2e/0ea5e9?text=REGISTRATE+Y+GANA+AVNT%0ABONO+DE+BIENVENIDA"
-                                        alt="Binance Registro"
-                                        className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                                        src="https://placehold.co/300x600/1a1a1a/FFD700.png?text=BINANCE+BONUS%0A+CLIC+AQUÍ+PARA+RECLAMAR&font=montserrat"
+                                        alt="Binance Bonus - Regístrate Ahora"
+                                        className="w-full h-auto rounded-xl group-hover:scale-105 transition-transform duration-300"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
@@ -466,9 +466,9 @@ export default function Home() {
                             >
                                 <div className="relative overflow-hidden rounded-xl border-2 border-primary-500/30 hover:border-primary-500 transition-all duration-300 hover:shadow-glow">
                                     <img
-                                        src="https://via.placeholder.com/300x600/1a1f2e/0ea5e9?text=REGISTRATE+Y+GANA+AVNT%0ABONO+DE+BIENVENIDA"
-                                        alt="Binance Registro"
-                                        className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                                        src="https://placehold.co/300x600/1a1a1a/FFD700.png?text=BINANCE+BONUS%0A+CLIC+AQUÍ+PARA+RECLAMAR&font=montserrat"
+                                        alt="Binance Bonus - Regístrate Ahora"
+                                        className="w-full h-auto rounded-xl group-hover:scale-105 transition-transform duration-300"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
