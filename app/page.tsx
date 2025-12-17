@@ -176,13 +176,60 @@ export default function Home() {
                                 rel="noopener noreferrer"
                                 className="block group"
                             >
-                                <div className="relative overflow-hidden rounded-xl border-2 border-primary-500/30 hover:border-primary-500 transition-all duration-300 hover:shadow-glow">
-                                    <img
-                                        src="https://placehold.co/300x600/1a1a1a/FFD700.png?text=BINANCE+BONUS%0A+CLIC+AQUÍ+PARA+RECLAMAR&font=montserrat"
-                                        alt="Binance Bonus - Regístrate Ahora"
-                                        className="w-full h-auto rounded-xl group-hover:scale-105 transition-transform duration-300"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-primary-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="relative overflow-hidden rounded-2xl border border-yellow-500/30 hover:border-yellow-500/60 transition-all duration-500 bg-gradient-to-br from-black via-gray-900 to-black p-8 hover:shadow-2xl hover:shadow-yellow-500/20">
+                                    {/* VIP Badge */}
+                                    <div className="absolute top-4 right-4">
+                                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                                            <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="relative z-10 space-y-6">
+                                        <div>
+                                            <h3 className="text-2xl font-bold text-white tracking-tight mb-2">
+                                                CUENTA<br />PROFESIONAL
+                                            </h3>
+                                            <p className="text-gray-400 text-sm leading-relaxed">
+                                                Opera con 0% riesgo y bonos exclusivos.
+                                            </p>
+                                        </div>
+
+                                        {/* Separator */}
+                                        <div className="w-full h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
+
+                                        {/* Features */}
+                                        <div className="space-y-3">
+                                            <div className="flex items-center gap-2 text-gray-300 text-xs">
+                                                <svg className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                </svg>
+                                                <span>Acceso VIP Trading</span>
+                                            </div>
+                                            <div className="flex items-center gap-2 text-gray-300 text-xs">
+                                                <svg className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                </svg>
+                                                <span>Soporte 24/7</span>
+                                            </div>
+                                            <div className="flex items-center gap-2 text-gray-300 text-xs">
+                                                <svg className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                </svg>
+                                                <span>Sin Comisiones</span>
+                                            </div>
+                                        </div>
+
+                                        {/* CTA Button */}
+                                        <button className="w-full py-4 px-6 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-black font-bold rounded-xl shadow-lg shadow-yellow-500/50 hover:shadow-yellow-500/80 transition-all duration-300 hover:scale-105 group-hover:animate-pulse">
+                                            ACTIVAR BONUS
+                                        </button>
+                                    </div>
+
+                                    {/* Ambient Glow */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 via-transparent to-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 </div>
                             </a>
                         </div>
@@ -464,13 +511,60 @@ export default function Home() {
                                 rel="noopener noreferrer"
                                 className="block group"
                             >
-                                <div className="relative overflow-hidden rounded-xl border-2 border-primary-500/30 hover:border-primary-500 transition-all duration-300 hover:shadow-glow">
-                                    <img
-                                        src="https://placehold.co/300x600/1a1a1a/FFD700.png?text=BINANCE+BONUS%0A+CLIC+AQUÍ+PARA+RECLAMAR&font=montserrat"
-                                        alt="Binance Bonus - Regístrate Ahora"
-                                        className="w-full h-auto rounded-xl group-hover:scale-105 transition-transform duration-300"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-primary-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="relative overflow-hidden rounded-2xl border border-yellow-500/30 hover:border-yellow-500/60 transition-all duration-500 bg-gradient-to-br from-black via-gray-900 to-black p-8 hover:shadow-2xl hover:shadow-yellow-500/20">
+                                    {/* VIP Badge */}
+                                    <div className="absolute top-4 right-4">
+                                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                                            <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="relative z-10 space-y-6">
+                                        <div>
+                                            <h3 className="text-2xl font-bold text-white tracking-tight mb-2">
+                                                CUENTA<br />PROFESIONAL
+                                            </h3>
+                                            <p className="text-gray-400 text-sm leading-relaxed">
+                                                Opera con 0% riesgo y bonos exclusivos.
+                                            </p>
+                                        </div>
+
+                                        {/* Separator */}
+                                        <div className="w-full h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
+
+                                        {/* Features */}
+                                        <div className="space-y-3">
+                                            <div className="flex items-center gap-2 text-gray-300 text-xs">
+                                                <svg className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                </svg>
+                                                <span>Acceso VIP Trading</span>
+                                            </div>
+                                            <div className="flex items-center gap-2 text-gray-300 text-xs">
+                                                <svg className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                </svg>
+                                                <span>Soporte 24/7</span>
+                                            </div>
+                                            <div className="flex items-center gap-2 text-gray-300 text-xs">
+                                                <svg className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                </svg>
+                                                <span>Sin Comisiones</span>
+                                            </div>
+                                        </div>
+
+                                        {/* CTA Button */}
+                                        <button className="w-full py-4 px-6 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-black font-bold rounded-xl shadow-lg shadow-yellow-500/50 hover:shadow-yellow-500/80 transition-all duration-300 hover:scale-105 group-hover:animate-pulse">
+                                            ACTIVAR BONUS
+                                        </button>
+                                    </div>
+
+                                    {/* Ambient Glow */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 via-transparent to-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 </div>
                             </a>
                         </div>
