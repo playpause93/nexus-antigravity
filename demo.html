@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Real-Time Trading Statistics</title>
+    <meta name="description" content="Track cryptocurrency rankings and win rates in real-time. Advanced trading analytics platform.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#b9e6fe',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            bg: '#0a0e1a',
+                            card: '#141823',
+                            border: '#1e2433',
+                            hover: '#1a1f2e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0e1a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #141823;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0ea5e9;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0284c7;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass {
+            background: rgba(20, 24, 35, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(14, 165, 233, 0.1);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.5s ease-out;
+        }
+
+        .shadow-glow {
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+        }
+
+        .shadow-glow-lg {
+            box-shadow: 0 0 40px rgba(14, 165, 233, 0.4);
+        }
+
+        .crypto-row {
+            transition: all 0.2s ease;
+        }
+
+        .crypto-row:hover {
+            background-color: #1a1f2e;
+            transform: scale(1.01);
+        }
+
+        .progress-bar {
+            transition: width 0.5s ease;
+        }
+
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+
+        .btn-hover:hover {
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="border-b border-[#1e2433] bg-[#141823]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-purple-600 rounded-lg flex items-center justify-center shadow-glow">
+                        <span class="text-white font-bold text-xl">N</span>
+                    </div>
+                    <h1 class="text-3xl font-bold gradient-text">NEXUS</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-200">Rankings</a>
+                    <a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-200">Markets</a>
+                    <a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-200">Analytics</a>
+                    <a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-200">Portfolio</a>
+                </nav>
+                <button class="px-6 py-2 bg-gradient-to-r from-primary-500 to-purple-600 rounded-lg font-semibold btn-hover">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content with Ads -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-12 gap-6">
+            <!-- Left Ad Space -->
+            <aside class="hidden xl:block col-span-2">
+                <div class="sticky top-8">
+                    <div class="glass rounded-lg p-4 h-96 flex flex-col items-center justify-center border-2 border-dashed border-[#1e2433]">
+                        <svg class="w-12 h-12 text-gray-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <p class="text-gray-600 text-sm font-medium">Espacio Publicitario</p>
+                        <p class="text-gray-700 text-xs mt-1">160 x 600</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <section class="col-span-12 xl:col-span-8">
+                <!-- Hero Section -->
+                <div class="glass rounded-2xl p-8 mb-6 animate-fade-in">
+                    <h2 class="text-4xl font-bold mb-2 gradient-text">Ranking de Criptomonedas</h2>
+                    <p class="text-gray-400 text-lg">Estadísticas en tiempo real • Actualizado cada 30 segundos</p>
+                    <div class="flex flex-wrap gap-4 mt-4">
+                        <div class="glass px-4 py-2 rounded-lg">
+                            <span class="text-gray-400 text-sm">Mercado Total:</span>
+                            <span class="ml-2 text-primary-400 font-bold">$1.8T</span>
+                        </div>
+                        <div class="glass px-4 py-2 rounded-lg">
+                            <span class="text-gray-400 text-sm">Vol. 24h:</span>
+                            <span class="ml-2 text-primary-400 font-bold">$95.2B</span>
+                        </div>
+                        <div class="glass px-4 py-2 rounded-lg">
+                            <span class="text-gray-400 text-sm">BTC Dom:</span>
+                            <span class="ml-2 text-primary-400 font-bold">48.3%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Crypto Ranking Table -->
+                <div class="glass rounded-2xl overflow-hidden animate-slide-up">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-[#1e2433]">
+                                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">Rank</th>
+                                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">Activo</th>
+                                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">Precio</th>
+                                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">24h</th>
+                                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">Win Rate</th>
+                                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cryptoTable">
+                                <!-- Content generated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Ad Space -->
+            <aside class="hidden xl:block col-span-2">
+                <div class="sticky top-8">
+                    <div class="glass rounded-lg p-4 h-96 flex flex-col items-center justify-center border-2 border-dashed border-[#1e2433]">
+                        <svg class="w-12 h-12 text-gray-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <p class="text-gray-600 text-sm font-medium">Espacio Publicitario</p>
+                        <p class="text-gray-700 text-xs mt-1">160 x 600</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#1e2433] bg-[#141823] mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center text-gray-500 text-sm">
+                © 2024 NEXUS Trading Statistics. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const cryptoData = [
+            { id: 1, name: 'Bitcoin', symbol: 'BTC', price: '$43,250.00', winRate: 68.5, change: '+3.2%', rank: 1, colors: ['#f7931a', '#ff9500'] },
+            { id: 2, name: 'Ethereum', symbol: 'ETH', price: '$2,285.00', winRate: 72.3, change: '+5.1%', rank: 2, colors: ['#627eea', '#8b9aff'] },
+            { id: 3, name: 'Binance Coin', symbol: 'BNB', price: '$315.40', winRate: 65.8, change: '-1.8%', rank: 3, colors: ['#f3ba2f', '#fcd435'] },
+            { id: 4, name: 'Solana', symbol: 'SOL', price: '$98.75', winRate: 78.9, change: '+12.4%', rank: 4, colors: ['#14f195', '#9945ff'] },
+            { id: 5, name: 'Cardano', symbol: 'ADA', price: '$0.52', winRate: 55.2, change: '-2.3%', rank: 5, colors: ['#0033ad', '#0066ff'] },
+            { id: 6, name: 'Ripple', symbol: 'XRP', price: '$0.61', winRate: 62.1, change: '+1.7%', rank: 6, colors: ['#23292f', '#346aa9'] },
+            { id: 7, name: 'Polkadot', symbol: 'DOT', price: '$7.23', winRate: 59.4, change: '-0.9%', rank: 7, colors: ['#e6007a', '#ff0080'] },
+            { id: 8, name: 'Avalanche', symbol: 'AVAX', price: '$38.90', winRate: 71.5, change: '+8.6%', rank: 8, colors: ['#e84142', '#ff6b6b'] },
+        ];
+
+        const tableBody = document.getElementById('cryptoTable');
+
+        cryptoData.forEach(crypto => {
+            const row = document.createElement('tr');
+            row.className = 'crypto-row border-b border-[#1e2433]';
+
+            const isPositive = crypto.change.startsWith('+');
+            const winRateColor = crypto.winRate >= 70 ? 'green' : crypto.winRate >= 60 ? 'yellow' : 'red';
+            
+            row.innerHTML = `
+                <td class="px-6 py-5">
+                    <span class="text-gray-400 font-semibold">${crypto.rank}</span>
+                </td>
+                <td class="px-6 py-5">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" 
+                             style="background: linear-gradient(135deg, ${crypto.colors[0]}, ${crypto.colors[1]})">
+                            ${crypto.symbol.substring(0, 2)}
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white">${crypto.name}</div>
+                            <div class="text-sm text-gray-500">${crypto.symbol}</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="px-6 py-5">
+                    <span class="text-white font-semibold">${crypto.price}</span>
+                </td>
+                <td class="px-6 py-5">
+                    <span class="inline-flex px-3 py-1 rounded-full text-sm font-semibold ${
+                        isPositive 
+                            ? 'bg-green-500/20 text-green-400' 
+                            : 'bg-red-500/20 text-red-400'
+                    }">
+                        ${crypto.change}
+                    </span>
+                </td>
+                <td class="px-6 py-5">
+                    <div class="flex items-center space-x-3">
+                        <div class="flex-1 bg-[#0a0e1a] rounded-full h-2 overflow-hidden">
+                            <div class="progress-bar h-full rounded-full ${
+                                winRateColor === 'green' ? 'bg-green-500' : 
+                                winRateColor === 'yellow' ? 'bg-yellow-500' : 'bg-red-500'
+                            }" style="width: ${crypto.winRate}%"></div>
+                        </div>
+                        <span class="font-semibold min-w-[3rem] ${
+                            winRateColor === 'green' ? 'text-green-400' : 
+                            winRateColor === 'yellow' ? 'text-yellow-400' : 'text-red-400'
+                        }">
+                            ${crypto.winRate}%
+                        </span>
+                    </div>
+                </td>
+                <td class="px-6 py-5">
+                    <button class="px-4 py-2 bg-gradient-to-r from-primary-500 to-purple-600 rounded-lg font-medium text-sm btn-hover">
+                        Ver Stats
+                    </button>
+                </td>
+            `;
+
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>
