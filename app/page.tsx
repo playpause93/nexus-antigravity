@@ -167,16 +167,24 @@ export default function Home() {
             {/* Main Content with Ads */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <div className="grid grid-cols-12 gap-6">
-                    {/* Left Ad Space */}
+                    {/* Left Ad Space - Binance Affiliate */}
                     <aside className="hidden xl:block col-span-2">
                         <div className="sticky top-24">
-                            <div className="glass rounded-lg p-4 h-96 flex flex-col items-center justify-center border-2 border-dashed border-dark-border">
-                                <svg className="w-12 h-12 text-gray-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                </svg>
-                                <p className="text-gray-600 text-sm font-medium">Espacio Publicitario</p>
-                                <p className="text-gray-700 text-xs mt-1">160 x 600</p>
-                            </div>
+                            <a
+                                href="https://accounts.binance.com/register?ref=1196272731"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block group"
+                            >
+                                <div className="relative overflow-hidden rounded-xl border-2 border-primary-500/30 hover:border-primary-500 transition-all duration-300 hover:shadow-glow">
+                                    <img
+                                        src="https://via.placeholder.com/300x600/1a1f2e/0ea5e9?text=REGISTRATE+Y+GANA+AVNT%0ABONO+DE+BIENVENIDA"
+                                        alt="Binance Registro"
+                                        className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-primary-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                </div>
+                            </a>
                         </div>
                     </aside>
 
@@ -196,8 +204,8 @@ export default function Home() {
                                     <button
                                         onClick={() => setViewMode('table')}
                                         className={`px-4 py-2 rounded-lg transition-all ${viewMode === 'table'
-                                                ? 'bg-primary-500 text-white'
-                                                : 'bg-dark-bg text-gray-400 hover:text-white'
+                                            ? 'bg-primary-500 text-white'
+                                            : 'bg-dark-bg text-gray-400 hover:text-white'
                                             }`}
                                     >
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -207,8 +215,8 @@ export default function Home() {
                                     <button
                                         onClick={() => setViewMode('cards')}
                                         className={`px-4 py-2 rounded-lg transition-all ${viewMode === 'cards'
-                                                ? 'bg-primary-500 text-white'
-                                                : 'bg-dark-bg text-gray-400 hover:text-white'
+                                            ? 'bg-primary-500 text-white'
+                                            : 'bg-dark-bg text-gray-400 hover:text-white'
                                             }`}
                                     >
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -319,8 +327,8 @@ export default function Home() {
                                                         <td className="px-6 py-5">
                                                             <span
                                                                 className={`inline-flex px-3 py-1 rounded-full text-sm font-semibold ${crypto.change >= 0
-                                                                        ? 'bg-green-500/20 text-green-400'
-                                                                        : 'bg-red-500/20 text-red-400'
+                                                                    ? 'bg-green-500/20 text-green-400'
+                                                                    : 'bg-red-500/20 text-red-400'
                                                                     }`}
                                                             >
                                                                 {formatChange(crypto.change)}
@@ -339,20 +347,20 @@ export default function Home() {
                                                                 <div className="flex-1 bg-dark-bg rounded-full h-2 overflow-hidden">
                                                                     <div
                                                                         className={`h-full rounded-full transition-all duration-500 ${crypto.winRate >= 70
-                                                                                ? 'bg-green-500'
-                                                                                : crypto.winRate >= 60
-                                                                                    ? 'bg-yellow-500'
-                                                                                    : 'bg-red-500'
+                                                                            ? 'bg-green-500'
+                                                                            : crypto.winRate >= 60
+                                                                                ? 'bg-yellow-500'
+                                                                                : 'bg-red-500'
                                                                             }`}
                                                                         style={{ width: `${crypto.winRate}%` }}
                                                                     />
                                                                 </div>
                                                                 <span
                                                                     className={`font-semibold min-w-[3rem] ${crypto.winRate >= 70
-                                                                            ? 'text-green-400'
-                                                                            : crypto.winRate >= 60
-                                                                                ? 'text-yellow-400'
-                                                                                : 'text-red-400'
+                                                                        ? 'text-green-400'
+                                                                        : crypto.winRate >= 60
+                                                                            ? 'text-yellow-400'
+                                                                            : 'text-red-400'
                                                                         }`}
                                                                 >
                                                                     {crypto.winRate}%
@@ -360,9 +368,18 @@ export default function Home() {
                                                             </div>
                                                         </td>
                                                         <td className="px-6 py-5">
-                                                            <button className="px-4 py-2 bg-gradient-to-r from-primary-500 to-purple-600 rounded-lg font-medium text-sm hover:shadow-glow transition-all duration-300 hover:scale-105">
-                                                                Ver Stats
-                                                            </button>
+                                                            <a
+                                                                href="https://accounts.binance.com/register?ref=1196272731"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                            >
+                                                                <button className="px-4 py-2 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-lg font-medium text-sm hover:shadow-glow transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                                                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                                                    </svg>
+                                                                    COPIAR SEÑAL
+                                                                </button>
+                                                            </a>
                                                         </td>
                                                     </tr>
                                                     {expandedId === crypto.id && (
@@ -403,8 +420,8 @@ export default function Home() {
                                             </div>
                                             <span
                                                 className={`px-3 py-1 rounded-full text-sm font-semibold ${crypto.change >= 0
-                                                        ? 'bg-green-500/20 text-green-400'
-                                                        : 'bg-red-500/20 text-red-400'
+                                                    ? 'bg-green-500/20 text-green-400'
+                                                    : 'bg-red-500/20 text-red-400'
                                                     }`}
                                             >
                                                 {formatChange(crypto.change)}
@@ -422,10 +439,10 @@ export default function Home() {
                                                 <span className="text-sm text-gray-400">Win Rate</span>
                                                 <span
                                                     className={`font-semibold ${crypto.winRate >= 70
-                                                            ? 'text-green-400'
-                                                            : crypto.winRate >= 60
-                                                                ? 'text-yellow-400'
-                                                                : 'text-red-400'
+                                                        ? 'text-green-400'
+                                                        : crypto.winRate >= 60
+                                                            ? 'text-yellow-400'
+                                                            : 'text-red-400'
                                                         }`}
                                                 >
                                                     {crypto.winRate}%
@@ -438,16 +455,24 @@ export default function Home() {
                         )}
                     </section>
 
-                    {/* Right Ad Space */}
+                    {/* Right Ad Space - Binance Affiliate */}
                     <aside className="hidden xl:block col-span-2">
                         <div className="sticky top-24">
-                            <div className="glass rounded-lg p-4 h-96 flex flex-col items-center justify-center border-2 border-dashed border-dark-border">
-                                <svg className="w-12 h-12 text-gray-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                </svg>
-                                <p className="text-gray-600 text-sm font-medium">Espacio Publicitario</p>
-                                <p className="text-gray-700 text-xs mt-1">160 x 600</p>
-                            </div>
+                            <a
+                                href="https://accounts.binance.com/register?ref=1196272731"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block group"
+                            >
+                                <div className="relative overflow-hidden rounded-xl border-2 border-primary-500/30 hover:border-primary-500 transition-all duration-300 hover:shadow-glow">
+                                    <img
+                                        src="https://via.placeholder.com/300x600/1a1f2e/0ea5e9?text=REGISTRATE+Y+GANA+AVNT%0ABONO+DE+BIENVENIDA"
+                                        alt="Binance Registro"
+                                        className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-primary-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                </div>
+                            </a>
                         </div>
                     </aside>
                 </div>
