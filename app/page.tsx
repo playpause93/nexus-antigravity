@@ -303,36 +303,36 @@ export default function Home() {
                                         <thead>
                                             <tr className="border-b border-dark-border">
                                                 <th
-                                                    className="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider cursor-pointer hover:text-white transition-colors"
+                                                    className="px-4 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider cursor-pointer hover:text-white transition-colors"
                                                     onClick={() => handleSort('rank')}
                                                 >
                                                     Rank <SortIcon field="rank" />
                                                 </th>
-                                                <th className="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                                                <th className="px-4 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">
                                                     Activo
                                                 </th>
                                                 <th
-                                                    className="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider cursor-pointer hover:text-white transition-colors"
+                                                    className="px-4 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider cursor-pointer hover:text-white transition-colors"
                                                     onClick={() => handleSort('price')}
                                                 >
                                                     Precio <SortIcon field="price" />
                                                 </th>
                                                 <th
-                                                    className="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider cursor-pointer hover:text-white transition-colors"
+                                                    className="px-4 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider cursor-pointer hover:text-white transition-colors"
                                                     onClick={() => handleSort('change')}
                                                 >
                                                     24h <SortIcon field="change" />
                                                 </th>
-                                                <th className="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                                                    Gráfico 7d
+                                                <th className="px-4 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider w-20">
+                                                    Gráfico
                                                 </th>
                                                 <th
-                                                    className="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider cursor-pointer hover:text-white transition-colors"
+                                                    className="px-4 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider cursor-pointer hover:text-white transition-colors"
                                                     onClick={() => handleSort('winRate')}
                                                 >
                                                     Win Rate <SortIcon field="winRate" />
                                                 </th>
-                                                <th className="px-6 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                                                <th className="px-4 py-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">
                                                     Acción
                                                 </th>
                                             </tr>
@@ -366,12 +366,12 @@ export default function Home() {
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td className="px-6 py-5">
+                                                        <td className="px-4 py-5">
                                                             <span className={`text-white font-semibold ${changedIds.has(crypto.id) ? 'value-updated' : ''}`}>
                                                                 {formatPrice(crypto.price)}
                                                             </span>
                                                         </td>
-                                                        <td className="px-6 py-5">
+                                                        <td className="px-4 py-5">
                                                             <span
                                                                 className={`inline-flex px-3 py-1 rounded-full text-sm font-semibold ${crypto.change >= 0
                                                                     ? 'bg-green-500/20 text-green-400'
@@ -381,15 +381,15 @@ export default function Home() {
                                                                 {formatChange(crypto.change)}
                                                             </span>
                                                         </td>
-                                                        <td className="px-6 py-5">
+                                                        <td className="px-4 py-5">
                                                             <MiniChart
                                                                 data={crypto.priceHistory}
-                                                                width={80}
+                                                                width={60}
                                                                 height={30}
                                                                 isPositive={crypto.change >= 0}
                                                             />
                                                         </td>
-                                                        <td className="px-6 py-5">
+                                                        <td className="px-4 py-5">
                                                             <div className="flex items-center space-x-3">
                                                                 <div className="flex-1 bg-dark-bg rounded-full h-2 overflow-hidden">
                                                                     <div
@@ -414,17 +414,17 @@ export default function Home() {
                                                                 </span>
                                                             </div>
                                                         </td>
-                                                        <td className="px-6 py-5">
+                                                        <td className="px-4 py-5">
                                                             <a
                                                                 href="https://accounts.binance.com/register?ref=1196272731"
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                             >
-                                                                <button className="px-4 py-2 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-lg font-medium text-sm hover:shadow-glow transition-all duration-300 hover:scale-105 flex items-center gap-2">
-                                                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                                <button className="px-3 py-2 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-lg font-medium text-xs hover:shadow-glow transition-all duration-300 hover:scale-105 flex items-center gap-1 whitespace-nowrap">
+                                                                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
                                                                         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                                                                     </svg>
-                                                                    COPIAR SEÑAL
+                                                                    COPIAR
                                                                 </button>
                                                             </a>
                                                         </td>
